@@ -30,3 +30,5 @@ Java语法知识点
 #### GitHub特技
 
 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
+
+[![Xzai/Java-learning_gitee](https://gitee.com/X-zai/Java-learning_gitee/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/X-zai/Java-learning_gitee)
