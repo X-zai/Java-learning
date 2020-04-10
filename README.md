@@ -1,3 +1,6 @@
+
+[![star](https://gitee.com/X-zai/Java-learning_gitee/badge/star.svg?theme=dark)](https://gitee.com/X-zai/Java-learning_gitee/stargazers)       [![fork](https://gitee.com/X-zai/Java-learning_gitee/badge/fork.svg?theme=dark)](https://gitee.com/X-zai/Java-learning_gitee/members)
+
 # java-learning
 
 #### 介绍
