@@ -43,7 +43,7 @@ public class 方法 {
 		System.out.println(result);
 
 		// 使用方法
-		drawRec(50, 100);
+		drawRec(1234, 1234);
 	}
 
 	/**
