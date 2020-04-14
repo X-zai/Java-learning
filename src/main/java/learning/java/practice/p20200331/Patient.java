@@ -8,53 +8,67 @@ package learning.java.practice.p20200331;
  */
 public class Patient {
 
-    /** 名字 */
-    private String name;
-    /** 体温 */
-    private double temperature;
+	/** 身份证 */
+	private String identityCard;
 
-    /**
-     * 构造方法
-     */
-    public Patient(String name, double temperature) {
-        this.name = name;
-        this.temperature = temperature;
-    }
+	/** 名字 */
+	private String name;
 
-    /**
-     * Getter method for property <tt>name</tt>.
-     * 
-     * @return property value of name
-     */
-    public String getName() {
-        return name;
-    }
+	/** 年龄 */
+	private int age;
 
-    /**
-     * Setter method for property <tt>name</tt>.
-     * 
-     * @param name value to be assigned to property name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
+	/** 体温 */
+	private double temperature;
 
-    /**
-     * Getter method for property <tt>temperature</tt>.
-     * 
-     * @return property value of temperature
-     */
-    public double getTemperature() {
-        return temperature;
-    }
+	/** 社区 */
+	private String community;
 
-    /**
-     * Setter method for property <tt>temperature</tt>.
-     * 
-     * @param temperature value to be assigned to property temperature
-     */
-    public void setTemperature(double temperature) {
-        this.temperature = temperature;
-    }
+	public Patient(String identityCard, String name, int age, double temperature, String community) {
+		this.identityCard = identityCard;
+		this.name = name;
+		this.age = age;
+		this.temperature = temperature;
+		this.community = community;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getTemperature() {
+		return temperature;
+	}
+
+	public void setTemperature(double temperature) {
+		this.temperature = temperature;
+	}
+
+	public String getIdentityCard() {
+		return identityCard;
+	}
+
+	public void setIdentityCard(String identityCard) {
+		this.identityCard = identityCard;
+	}
+
+	public String getCommunity() {
+		return community;
+	}
+
+	public void setCommunity(String community) {
+		this.community = community;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
 
 }
