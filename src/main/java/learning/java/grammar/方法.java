@@ -4,6 +4,9 @@
  */
 package learning.java.grammar;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 
  * 方法定义：代码的集合，它们在一起执行一个功能，可以反复使用。
@@ -22,101 +25,133 @@ package learning.java.grammar;
  */
 public class 方法 {
 
-	/**
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
+    /**
+     * 
+     * @param args
+     */
+    public static void main(String[] args) {
 
-		/**
-		 * 使用方法
-		 */
-		int a = 12;
-		int b = 3;
-		// 使用方法
-		int c = max(a, b);
-		System.out.println("较大值为：" + c);
+        /**
+         * 使用方法
+         */
+        int a = 12;
+        int b = 3;
+        //使用max方法，有返回值
+        int c = max(a, b);
+        System.out.println("较大值为：" + c);
 
-		String feature = "有胡子";
-		// 使用方法
-		String result = manOrWoman(feature);
-		System.out.println(result);
+        String feature = "有胡子";
+        //使用manOrWoman方法，有返回值
+        String result = manOrWoman(feature);
+        System.out.println(result);
 
-		// 使用方法
-		drawRec(1234, 1234);
-	}
+        //使用drawRec方法，没有返回值
+        drawRec(1234, 1234);
 
-	/**
-	 * 例子1
-	 * 
-	 * 返回两个整型变量中较大值
-	 * 
-	 * @param num1 第一个数字
-	 * @param num2 第二个数字
-	 * @return 返回较大值
-	 * 
-	 */
-	public static int max(int num1, int num2) {
-		int max = 0;
-		if (num1 > num2) {
-			max = num1;
-		} else {
-			max = num2;
-		}
-		return max;
-	}
+        //使用getHeightOver170方法，有返回值
+        List<Integer> heights = new ArrayList<>();
+        heights.add(168);
+        heights.add(178);
+        heights.add(186);
+        heights.add(156);
+        heights.add(199);
+        List<Integer> hs = getHeightOver170(heights);
+        for (Integer h : hs) {
+            System.out.println(h);
+        }
 
-	/**
-	 * 例子2
-	 * 
-	 * 根据特征判断性别
-	 * 
-	 * @param feature 特征
-	 * @return 性别结果
-	 */
-	public static String manOrWoman(String feature) {
-		System.out.println("-------华丽的分割线-------");
-		String result = "";
-		switch (feature) {
-		case "有喉结":
-		case "有胡子":
-		case "爱抽烟":
-			// 当特征值满足喉结、胡子、抽烟中任意一个，执行分支语句1
-			// 分支语句1
-			result = "男人";
-			// 结束switch语句
-			break;
-		case "长头发":
-		case "戴耳环":
-		case "爱化妆":
-			// 当特征满足值长头发、戴耳环、化妆中任意一个时，执行分支语句2
-			// 分支语句2
-			result = "女人";
-			// 结束switch语句
-			break;
-		}
-		return "可能是个" + result;
-	}
+    }
 
-	/**
-	 * 例子3
-	 * 
-	 * 打印长方形
-	 * 
-	 * @param line 行数
-	 * @param row  列数
-	 */
-	public static void drawRec(int line, int row) {
-		System.out.println("-------华丽的分割线-------");
-		// 外层循环控制行数
-		for (int i = 1; i <= line; i++) {
-			// 内层循环控制列数
-			for (int j = 1; j <= 2 * i - 1; j++) {
-				// 每循环一次打一个💢
-				System.out.print("💢");
-			}
-			// 每打完一行就换行
-			System.out.println();
-		}
-	}
+    /**
+     * 例子1
+     * 
+     * 返回两个整型变量中较大值
+     * 
+     * @param num1 第一个数字
+     * @param num2 第二个数字
+     * @return 返回较大值
+     * 
+     */
+    public static int max(int num1, int num2) {
+        int max = 0;
+        if (num1 > num2) {
+            max = num1;
+        } else {
+            max = num2;
+        }
+        return max;
+    }
+
+    /**
+     * 例子2
+     * 
+     * 根据特征判断性别
+     * 
+     * @param feature 特征
+     * @return 性别结果
+     */
+    public static String manOrWoman(String feature) {
+        System.out.println("-------华丽的分割线-------");
+        String result = "";
+        switch (feature) {
+            case "有喉结":
+            case "有胡子":
+            case "爱抽烟":
+                // 当特征值满足喉结、胡子、抽烟中任意一个，执行分支语句1
+                // 分支语句1
+                result = "男人";
+                // 结束switch语句
+                break;
+            case "长头发":
+            case "戴耳环":
+            case "爱化妆":
+                // 当特征满足值长头发、戴耳环、化妆中任意一个时，执行分支语句2
+                // 分支语句2
+                result = "女人";
+                // 结束switch语句
+                break;
+        }
+        return "可能是个" + result;
+    }
+
+    /**
+     * 例子3
+     * 
+     * 打印长方形
+     * 
+     * @param line 行数
+     * @param row  列数
+     */
+    public static void drawRec(int line, int row) {
+        System.out.println("-------华丽的分割线-------");
+        // 外层循环控制行数
+        for (int i = 1; i <= line; i++) {
+            // 内层循环控制列数
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                // 每循环一次打一个💢
+                System.out.print("💢");
+            }
+            // 每打完一行就换行
+            System.out.println();
+        }
+    }
+
+    /**
+     * 返回身高大于170cm的人
+     * 
+     * @param heights 所有人
+     * @return 身高大于170cm的人
+     */
+    public static List<Integer> getHeightOver170(List<Integer> heights) {
+        //新建一个列表，存放返回结果
+        List<Integer> result = new ArrayList<Integer>();
+        for (Integer height : heights) {
+            //如果身高大于170cm，添加到结果列表
+            if (height > 170) {
+                result.add(height);
+            }
+        }
+        //返回结果列表
+        return result;
+    }
 }
