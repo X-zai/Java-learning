@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Test {
- 
+
     public static void main(String[] args) throws Exception {
         List<Patient> allPatients = new ArrayList<Patient>();
         Patient patient01 = new Patient("510103198403254118", "小王", 28, 37.4, "中坝社区");
