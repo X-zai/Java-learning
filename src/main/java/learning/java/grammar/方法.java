@@ -30,10 +30,6 @@ public class 方法 {
      * @param args
      */
     public static void main(String[] args) {
-
-        /**
-         * 使用方法
-         */
         int a = 12;
         int b = 3;
         //使用max方法，有返回值
