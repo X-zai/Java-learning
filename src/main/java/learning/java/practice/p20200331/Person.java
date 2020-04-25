@@ -6,7 +6,7 @@ package learning.java.practice.p20200331;
  * @author Rayliu40k
  * @version $Id: Patient.java, v 0.1 Mar 20, 2020 4:22:21 PM Rayliu40k Exp $
  */
-public class Patient {
+public class Person {
 
 	/** 身份证 */
 	private String identityCard;
@@ -23,7 +23,7 @@ public class Patient {
 	/** 社区 */
 	private String community;
 
-	public Patient(String identityCard, String name, int age, double temperature, String community) {
+	public Person(String identityCard, String name, int age, double temperature, String community) {
 		this.identityCard = identityCard;
 		this.name = name;
 		this.age = age;
