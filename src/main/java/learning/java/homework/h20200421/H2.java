@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class H2 {
- 
+
 	public static void main(String[] args) {
 		List<Integer> li = new ArrayList<Integer>();
 		li.add(88);
@@ -21,7 +21,7 @@ public class H2 {
 	public static int li(List<Integer> li) {
 		int i = 0;
 		li.sort(Comparator.naturalOrder());
-		i=li.get(5);
+		i = li.get(li.size() - 1);
 		return i;
 	}
 }
