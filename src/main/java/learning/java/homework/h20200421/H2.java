@@ -7,7 +7,6 @@ import java.util.List;
 public class H2 {
 
 	public static void main(String[] args) {
-		int i = 0;
 		List<Integer> li = new ArrayList<Integer>();
 		li.add(88);
 		li.add(18);
@@ -21,8 +20,8 @@ public class H2 {
 
 	public static int li(List<Integer> li) {
 		int i = 0;
-		li.sort(Comparator.reverseOrder());
-		i=li.get(0);
+		li.sort(Comparator.naturalOrder());
+		i=li.get(5);
 		return i;
 	}
 }

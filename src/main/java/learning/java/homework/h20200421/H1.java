@@ -3,16 +3,13 @@ package learning.java.homework.h20200421;
 public class H1 {
 
 	public static void main(String[] args) {
-		String str = "";
-		String print = str(str);
-		System.out.println(print);
+		int i = 3;
+		i(i);
 	}
 
-	public static String str(String str) {
-		int i = 3;
+	public static void i(int i) {
 		for (int j = 0; j < i; j++) {
-			str += "Hello world\n";
+			System.out.println("Hello world");
 		}
-		return str;
 	}
 }
