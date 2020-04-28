@@ -4,7 +4,7 @@ public class H1 {
 
 	public static void main(String[] args) {
 		int i = 3;
-		i(i); 
+		i(i);
 	}
 
 	public static void i(int i) {
