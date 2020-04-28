@@ -3,7 +3,6 @@ package learning.java.homework.h20200414;
 import java.util.ArrayList;
 import java.util.List;
 
-import learning.java.practice.p20200331.Person;
 
 public class H3 {
 /**
@@ -13,15 +12,15 @@ public class H3 {
  */
 	public static void main(String[] args) {
 		ArrayList<Person> h003 = new ArrayList<Person>();
-		Person patient01 = new Person("510103198403254118", "小王", 28, 37.4, "中坝社区");
-        Person patient02 = new Person("510104196507218121", "小美", 28, 38.3, "黄忠社区");
-        Person patient03 = new Person("510102199511023322", "小刘", 55, 36.9, "蓓蕾社区");
-        Person patient04 = new Person("510106195509225413", "小张", 67, 37.2, "苏坡社区");
-        Person patient05 = new Person("510104198507212114", "小宋", 18, 37.5, "芳草社区");
-        Person patient06 = new Person("510107199507213115", "小李", 14, 37.6, "中坝社区");
-        Person patient07 = new Person("510104197507214126", "小明", 78, 36.8, "芳草社区");
-        Person patient08 = new Person("510109199801115123", "小杨", 55, 36.9, "蓓蕾社区");
-        Person patient09 = new Person("510104197603217112", "小秦", 25, 38.5, "芳草社区");
+		Person patient01 = new Person("小王","中坝社区");
+        Person patient02 = new Person("小美","黄忠社区");
+        Person patient03 = new Person("小刘","蓓蕾社区");
+        Person patient04 = new Person("小张","苏坡社区");
+        Person patient05 = new Person("小宋","芳草社区");
+        Person patient06 = new Person("小李","中坝社区");
+        Person patient07 = new Person("小明","芳草社区");
+        Person patient08 = new Person("小杨","蓓蕾社区");
+        Person patient09 = new Person("小秦","芳草社区");
 		h003.add(patient01);
 		h003.add(patient02);
 		h003.add(patient03);
@@ -31,14 +30,21 @@ public class H3 {
 		h003.add(patient07);
 		h003.add(patient08);
 		h003.add(patient09);
+		String sq1 = sq("小宋", h003);
+		System.out.println(sq1);
 	}
 /**
  * 
  * @param h003
  * @return 社区
  */
-	public static String sq(List<Integer> h003) {
-		ArrayList<String> sq = new ArrayList<String>();
-		return null;
+	public static String sq(String getMc,List<Person> h003) {
+		String sq = null;
+		for(Person r:h003) {
+			if(getMc.equals("小宋")) {
+				sq=r.getMc();
+			}
+		}
+		return sq;
 	}
 }
