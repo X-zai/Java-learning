@@ -37,11 +37,19 @@ public class 发送HTTP的JSON请求 {
         //得到签名字符串
         String sign = URLEncoder.encode(new String(Base64.encodeBase64(signData)), "UTF-8");
         //要发送的数据
-        String data = "{\n" + "  \"msgtype\": \"text\",\n" + "  \"text\": {\n"
-                      + "    \"content\": \"签名成功，哈哈哈111   \"\n" + "  },\n" + "  \"at\": {\n"
-                      + "    \"atMobiles\": [\n" + "      \"156xxxx8827\",\n"
-                      + "      \"189xxxx8325\"\n" + "    ],\n" + "    \"isAtAll\": false\n"
-                      + "  }\n" + "}";
+        String data = "{\n" + 
+        		"     \"msgtype\": \"markdown\",\n" + 
+        		"     \"markdown\": {\n" + 
+        		"         \"title\":\"The Mimo\",\n" + 
+        		"         \"text\": \"#### The Mimo \\n> \\n> ![screenshot](https://jvav.top/static/images/ad-by-toliet.png)\\n> ###### xx点xx分发布 [The Mimo](https://mimo.run/vg0te1/) \\n\"\n" + 
+        		"     },\n" + 
+        		"      \"at\": {\n" + 
+        		"          \"atMobiles\": [\n" + 
+        		"              \"150XXXXXXXX\"\n" + 
+        		"          ],\n" + 
+        		"          \"isAtAll\": false\n" + 
+        		"      }\n" + 
+        		" }";
         //构建URL
         String uri = "https://oapi.dingtalk.com/robot/send?access_token=f5896bed709418fcaa5da249b63de95db4c1a7c8c7bdee9750e668791b7308e4"
                      + "&timestamp=" + timestamp + "&sign=" + sign;
