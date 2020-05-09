@@ -46,7 +46,8 @@ public class 发送HTTP的JSON请求 {
         String uri = "https://oapi.dingtalk.com/robot/send?access_token=f5896bed709418fcaa5da249b63de95db4c1a7c8c7bdee9750e668791b7308e4"
                      + "&timestamp=" + timestamp + "&sign=" + sign;
         //发送给机器人
-        Request.Post(uri).useExpectContinue().version(HttpVersion.HTTP_1_1)
-            .bodyString(data, ContentType.APPLICATION_JSON).execute().returnContent().asBytes();
+        String content = Request.Post(uri).useExpectContinue().version(HttpVersion.HTTP_1_1)
+            .bodyString(data, ContentType.APPLICATION_JSON).execute().returnContent().asString();
+        System.out.println(content);
     }
 }
