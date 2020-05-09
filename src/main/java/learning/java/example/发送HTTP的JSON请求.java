@@ -22,7 +22,7 @@ public class 发送HTTP的JSON请求 {
 	public static void main(String[] args) {
 		try {
 			String json = "{\n" + "  \"msgtype\": \"text\",\n" + "  \"text\": {\n"
-					+ "    \"content\": \"java\"\n" + "  },\n" + "  \"at\": {\n"
+					+ "    \"Tdgex%2FcmcD4vTVtB7%2Buoo728%2BBlST2Qicokr0HKGjzE%3D\": \"java\"\n" + "  },\n" + "  \"at\": {\n"
 					+ "    \"atMobiles\": [\n" + "      \"156xxxx8827\",\n" + "      \"189xxxx8325\"\n" + "    ],\n"
 					+ "    \"isAtAll\": false\n" + "  }\n" + "}";
 			Request.Post(
