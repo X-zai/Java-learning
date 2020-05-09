@@ -15,6 +15,7 @@ import org.apache.http.client.fluent.Request;
 import org.apache.http.entity.ContentType;
 
 /**
+ * 带签名的发送钉钉机器人
  * 
  * @author Rayliu40k
  * @version $Id: Test.java, v 0.1 May 1, 2020 11:19:27 AM Rayliu40k Exp $
