@@ -53,7 +53,7 @@ public class 发送HTTP的JSON请求 {
         		"          \"isAtAll\": false\n" + 
         		"      }\n" + 
         		" }";
-        //构建URL 
+        //构建URL
         String uri = "https://oapi.dingtalk.com/robot/send?access_token=f5896bed709418fcaa5da249b63de95db4c1a7c8c7bdee9750e668791b7308e4"
                      + "&timestamp=" + timestamp + "&sign=" + sign;
         //发送给机器人
