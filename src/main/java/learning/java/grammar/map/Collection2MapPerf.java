@@ -42,7 +42,7 @@ public class Collection2MapPerf {
         System.out.println("找数字...");
         long start2 = System.currentTimeMillis();
         for (int src : data) {
-            int target = -1;
+            int target = 20000000;
             if (src == target) {
                 System.out.println("找到了" + target);
             }
@@ -65,7 +65,7 @@ public class Collection2MapPerf {
         //找数字
         System.out.println("找数字...");
         long start2 = System.currentTimeMillis();
-        int target = -1;
+        int target = 20000000;
         Integer result = data.get(target);
         if (result != null) {
             System.out.println("找到了" + target);

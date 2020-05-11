@@ -54,6 +54,9 @@ public class MapDemo {
         System.out.println(richardAge);
     }
 
+    /**
+     * 删除元素
+     */
     public static void remove() {
         //放元素
         Map<String, Integer> personAges = new HashMap<String, Integer>();
