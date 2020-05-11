@@ -40,8 +40,10 @@ public class 发送HTTP的JSON请求 {
         String data = "{\n" + 
         		"     \"msgtype\": \"markdown\",\n" + 
         		"     \"markdown\": {\n" + 
-        		"         \"title\":\"The Mimo\",\n" + 
-        		"         \"text\": \"#### The Mimo \\n> \\n> ![screenshot](https://jvav.top/static/images/ad-by-toliet.png)\\n> ###### xx点xx分发布 [The Mimo](https://mimo.run/vg0te1/) \\n\"\n" + 
+        		"         \"title\":\"xxx\",\n" + 
+        		"         \"text\": \"# 专业团队 ![哈哈哈](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=938895395,1527057469&fm=11&gp=0.jpg)" + 
+        		"\n" + 
+        		"\\n\"\n" + 
         		"     },\n" + 
         		"      \"at\": {\n" + 
         		"          \"atMobiles\": [\n" + 
