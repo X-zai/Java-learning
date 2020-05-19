@@ -10,7 +10,7 @@ import java.util.List;
  * @author Xzai
  *
  */
-public class Student2 {
+public class Student3 {
 	/**
 	 * @param args
 	 * @notes null
