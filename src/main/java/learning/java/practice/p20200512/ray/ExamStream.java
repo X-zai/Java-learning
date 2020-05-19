@@ -7,14 +7,15 @@ package learning.java.practice.p20200512.ray;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
- * 期末考试
+ * 期末考试(流式编程)
  * 
  * @author Rayliu40k
  * @version $Id: Main.java, v 0.1 May 19, 2020 10:06:41 AM Rayliu40k Exp $
  */
-public class Exam {
+public class ExamStream {
 
     /**
      * 
@@ -49,29 +50,26 @@ public class Exam {
     public static void top3InCourses(List<Student> students) {
         //1. 语文
         //1.1 找出语文成绩前3的分数
-        List<Integer> allChineseScore = new ArrayList<>();
-        //按照语文成绩生成新列表
-        for (Student student : students) {
-            allChineseScore.add(student.getChineseScore());
-        }
-        //按照成绩的倒序排序(高分 -> 低分)
-        allChineseScore.sort(Comparator.reverseOrder());
-        //取前3个        
-        List<Integer> top3ChineseScore = allChineseScore.subList(0, 3);
+        List<Integer> top3ChineseScore = students.stream()
+            //按照语文成绩生成新列表
+            .map(Student::getChineseScore)
+            //按照成绩的倒序排序(高分 -> 低分)
+            .sorted(Comparator.reverseOrder())
+            //取前3个
+            .limit(3)
+            //放到新List
+            .collect(Collectors.toList());
         //打印结果
         System.out.println(top3ChineseScore);
 
         //1.2 找出语文成绩前3的分数对应的学生
-        List<Student> top3ChineseScoreStudents = new ArrayList<Student>();
-        for (Student student : students) {
+        List<Student> top3ChineseScoreStudents = students.stream()
             //获取语文成绩前3的学生
-            if (top3ChineseScore.contains(student.getChineseScore())) {
-                top3ChineseScoreStudents.add(student);
-            }
-        }
-        //按照成绩的倒序排序(高分 -> 低分)
-        top3ChineseScoreStudents.sort(Comparator.comparing(Student::getChineseScore).reversed());
-
+            .filter(student -> top3ChineseScore.contains(student.getChineseScore()))
+            //按照成绩的倒序排序(高分 -> 低分)
+            .sorted(Comparator.comparing(Student::getChineseScore).reversed())
+            //放到新List
+            .collect(Collectors.toList());
         //打印结果
         top3ChineseScoreStudents.forEach(student -> {
             System.out.println("-----");
