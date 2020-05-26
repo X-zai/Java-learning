@@ -43,18 +43,9 @@ public class Student3 {
 	 * @notes null
 	 */
 	private static void student(List<Stu> allStudents) {
-		int ch = 0;
-		int ma = 0;
-		int en = 0;
-		String name = "";
-		for (Stu Stu : allStudents) {
-			if (ch < Stu.getCh() && en < Stu.getEn() && ma < Stu.getMa()) {
-				ch = Stu.getCh();
-				en = Stu.getEn();
-				ma = Stu.getMa();
-				name =Stu.getPa();
-			}
+		int stu1 = 0;
+		for (Stu stu : allStudents) {
+			stu1 = stu1 + stu.getCh();
 		}
-		System.out.println(name);
 	}
 }

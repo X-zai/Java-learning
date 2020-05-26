@@ -64,7 +64,7 @@ public class Computer {
         try {
             Thread.sleep(5000);
         } catch (Exception e) {
-            // TODO: handle exception
+            
         }
         System.out.println("欢迎来到操作系统!");
     }

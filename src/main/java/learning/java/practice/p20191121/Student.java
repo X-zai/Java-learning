@@ -24,7 +24,7 @@ public class Student {
 				try {
 					Thread.sleep(3000);
 				} catch (Exception e) {
-					// TODO: handle exception
+					
 				}
 			}
 
@@ -112,7 +112,7 @@ public class Student {
 				try {
 					Thread.sleep(1000);
 				} catch (Exception e) {
-					// TODO: handle exception
+					
 				}
 			}
 			System.out.println("到小学了");
