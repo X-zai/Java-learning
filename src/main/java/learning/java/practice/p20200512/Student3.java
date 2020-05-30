@@ -44,8 +44,14 @@ public class Student3 {
 	 */
 	private static void student(List<Stu> allStudents) {
 		int stu1 = 0;
+		int stu2 = 0;
+		int stu3 = 0;
 		for (Stu stu : allStudents) {
 			stu1 = stu1 + stu.getCh();
+			stu2 = stu2 + stu.getEn();
+			stu3 = stu3 + stu.getMa();
 		}
+		
+		System.out.println(stu1/allStudents.size()+","+stu2/allStudents.size()+","+stu3/allStudents.size());
 	}
 }
