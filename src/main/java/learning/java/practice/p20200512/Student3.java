@@ -46,12 +46,23 @@ public class Student3 {
 		int stu1 = 0;
 		int stu2 = 0;
 		int stu3 = 0;
+		List<Integer> stu001 = new ArrayList<Integer>();
+		List<Integer> stu002 = new ArrayList<Integer>();
+		List<Integer> stu003 = new ArrayList<Integer>();
 		for (Stu stu : allStudents) {
 			stu1 = stu1 + stu.getCh();
 			stu2 = stu2 + stu.getEn();
 			stu3 = stu3 + stu.getMa();
 		}
-		
-		System.out.println(stu1/allStudents.size()+","+stu2/allStudents.size()+","+stu3/allStudents.size());
+		for (Stu stu : allStudents) {
+			if (stu.getCh() < stu1) {
+				stu001.add(stu.getCh());
+			} else if (stu.getEn() < stu2) {
+				stu002.add(stu.getEn());
+			} else if (stu.getMa() < stu3) {
+				stu003.add(stu.getMa());
+			}
+		}
+		System.out.println(stu001+","+stu002+","+stu003);
 	}
 }
