@@ -1,7 +1,5 @@
 package learning.java.practice.p20200512;
 
-import java.io.ObjectInputStream.GetField;
-import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -31,13 +29,13 @@ public class Student2 {
 	public static void main(String[] args) throws Exception {
 		// 准备数据
 		List<Student> students = new ArrayList<Student>();
-		Student student01 = new Student("小王", "王芳", 78, 65, 89);
-		Student student02 = new Student("小李", "李海", 78, 65, 89);
+		Student student01 = new Student("小王", "王芳", 89, 90, 91);
+		Student student02 = new Student("小李", "李海", 65, 88, 83);
 		Student student03 = new Student("小宋", "宋阳", 78, 65, 89);
-		Student student04 = new Student("小明", "张大明", 78, 65, 89);
-		Student student05 = new Student("小芳", "夏芳", 78, 65, 89);
-		Student student06 = new Student("小秦", "秦岚", 78, 65, 89);
-		Student student07 = new Student("小刘", "刘东", 78, 65, 89);
+		Student student04 = new Student("小明", "张大明", 93, 88, 92);
+		Student student05 = new Student("小芳", "夏芳", 67, 87, 76);
+		Student student06 = new Student("小秦", "秦岚", 85, 95, 80);
+		Student student07 = new Student("小刘", "刘东", 90, 90, 86);
 		students.add(student01);
 		students.add(student02);
 		students.add(student03);
@@ -93,9 +91,10 @@ public class Student2 {
 			String sign = URLEncoder.encode(new String(Base64.encodeBase64(signData)), "UTF-8");
 			// 要发送的数据
 			String data = "{\r\n" + "     \"msgtype\": \"markdown\",\r\n" + "     \"markdown\": {\r\n"
-					+ "         \"title\":\"💬\",\r\n" + "         \"text\": \"# " + send.get(i) + "\\n\"\r\n" + "     },\r\n"
-					+ "      \"at\": {\r\n" + "          \"atMobiles\": [\r\n" + "              \"150XXXXXXXX\"\r\n"
-					+ "          ],\r\n" + "          \"isAtAll\": false\r\n" + "      }\r\n" + " }";
+					+ "         \"title\":\"💬\",\r\n" + "         \"text\": \"# " + send.get(i) + "\\n\"\r\n"
+					+ "     },\r\n" + "      \"at\": {\r\n" + "          \"atMobiles\": [\r\n"
+					+ "              \"150XXXXXXXX\"\r\n" + "          ],\r\n" + "          \"isAtAll\": false\r\n"
+					+ "      }\r\n" + " }";
 			// 构建URL
 			String uri = "https://oapi.dingtalk.com/robot/send?access_token=f5896bed709418fcaa5da249b63de95db4c1a7c8c7bdee9750e668791b7308e4"
 					+ "&timestamp=" + timestamp + "&sign=" + sign;
