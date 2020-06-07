@@ -6,6 +6,8 @@ package learning.java.grammar.map;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 /**
  * Map使用例子
@@ -23,6 +25,7 @@ public class MapDemo {
         put();
         get();
         remove();
+        loop();
     }
 
     /**
@@ -70,6 +73,26 @@ public class MapDemo {
         //拿Tom的年龄
         Integer tomAge = personAges.get("Tom");
         System.out.println(tomAge);
+    }
+
+    /**
+     * 循环元素
+     */
+    public static void loop() {
+        //放元素
+        Map<String, Integer> personAges = new HashMap<String, Integer>();
+        personAges.put("Tom", 11);
+        personAges.put("Kenny", 17);
+        personAges.put("Richard", 33);
+
+        //获取Entry列表
+        Set<Entry<String, Integer>> entrys = personAges.entrySet();
+        for (Entry<String, Integer> entry : entrys) {
+            //获取key
+            System.out.println(entry.getKey());
+            //获取value
+            System.out.println(entry.getValue());
+        }
     }
 
 }
