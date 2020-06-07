@@ -22,9 +22,9 @@ public class MapDemo {
      * @param args
      */
     public static void main(String[] args) {
-        put();
-        get();
-        remove();
+        //        put();
+        //        get();
+        //        remove();
         loop();
     }
 
@@ -44,16 +44,16 @@ public class MapDemo {
     public static void get() {
         //放元素
         Map<String, Integer> personAges = new HashMap<String, Integer>();
-        personAges.put("Tom", 11);
-        personAges.put("Kenny", 17);
-        personAges.put("Richard", 33);
+        personAges.put("语文平均分", 67);
+        personAges.put("数学平均分", 81);
+        personAges.put("英语平均分", 85);
 
-        //拿Tom的年龄
-        Integer tomAge = personAges.get("Tom");
+        //拿语文平均分
+        Integer tomAge = personAges.get("语文平均分");
         System.out.println(tomAge);
 
-        //拿Tom的年龄
-        Integer richardAge = personAges.get("Richard");
+        //拿数学平均分
+        Integer richardAge = personAges.get("数学平均分");
         System.out.println(richardAge);
     }
 
@@ -63,15 +63,15 @@ public class MapDemo {
     public static void remove() {
         //放元素
         Map<String, Integer> personAges = new HashMap<String, Integer>();
-        personAges.put("Tom", 11);
-        personAges.put("Kenny", 17);
-        personAges.put("Richard", 33);
+        personAges.put("语文平均分", 67);
+        personAges.put("数学平均分", 81);
+        personAges.put("英语平均分", 85);
 
         //删除Tom的年龄
-        personAges.remove("Tom");
+        personAges.remove("语文平均分");
 
         //拿Tom的年龄
-        Integer tomAge = personAges.get("Tom");
+        Integer tomAge = personAges.get("语文平均分");
         System.out.println(tomAge);
     }
 
@@ -81,9 +81,9 @@ public class MapDemo {
     public static void loop() {
         //放元素
         Map<String, Integer> personAges = new HashMap<String, Integer>();
-        personAges.put("Tom", 11);
-        personAges.put("Kenny", 17);
-        personAges.put("Richard", 33);
+        personAges.put("语文平均分", 67);
+        personAges.put("数学平均分", 81);
+        personAges.put("英语平均分", 85);
 
         //获取Entry列表
         Set<Entry<String, Integer>> entrys = personAges.entrySet();
