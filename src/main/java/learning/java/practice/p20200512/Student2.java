@@ -3,7 +3,10 @@ package learning.java.practice.p20200512;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -30,7 +33,7 @@ public class Student2 {
 		// 准备数据
 		List<Student> students = new ArrayList<Student>();
 		Student student01 = new Student("小王", "王芳", 89, 90, 91);
-		Student student02 = new Student("小李", "李海", 65, 88, 83);
+		Student student02 = new Student("小李", "李海", 90, 90, 90);
 		Student student03 = new Student("小宋", "宋阳", 78, 65, 89);
 		Student student04 = new Student("小明", "张大明", 93, 88, 92);
 		Student student05 = new Student("小芳", "夏芳", 67, 87, 76);
@@ -54,13 +57,17 @@ public class Student2 {
 	 * @throws Exception
 	 */
 	public static void top3InCourses(List<Student> students) throws Exception {
-		List<Integer> xxsDeZongFen = new ArrayList<Integer>();
+		Set<Integer> xxsDeZongFen_s = new TreeSet<Integer>();
 		for (Student Xxs : students) {
-			xxsDeZongFen.add(Xxs.getChineseScore() + Xxs.getEnglishScore() + Xxs.getMathScore());
+			xxsDeZongFen_s.add(Xxs.getChineseScore() + Xxs.getEnglishScore() + Xxs.getMathScore());
 		}
-		System.out.println(xxsDeZongFen);
-		xxsDeZongFen.sort(Comparator.reverseOrder());
-		List<Integer> top = xxsDeZongFen.subList(0, 3);
+		System.out.println(xxsDeZongFen_s);
+		List<Integer> xxsDeZongFen_l = new ArrayList<Integer>();
+		for (Integer xxsDeZongFen : xxsDeZongFen_s) {
+			xxsDeZongFen_l.add(xxsDeZongFen);
+		}
+		xxsDeZongFen_l.sort(Comparator.reverseOrder());
+		List<Integer> top = xxsDeZongFen_l.subList(0, 3);
 		List<String> send = new ArrayList<String>();
 		System.out.println(top);
 		int i = 1;
