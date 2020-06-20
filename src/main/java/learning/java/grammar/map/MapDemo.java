@@ -4,6 +4,7 @@
  */
 package learning.java.grammar.map;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -25,10 +26,11 @@ public class MapDemo {
         //        put();
         //        get();
         //        remove();
-        loop1();
-        loop2();
-        findKey();
-        findValue();
+        object();
+        //        loop1();
+        //        loop2();
+        //        findKey();
+        //        findValue();
     }
 
     /**
@@ -76,6 +78,27 @@ public class MapDemo {
         //拿Tom的年龄
         Integer tomAge = personAges.get("语文平均分");
         System.out.println(tomAge);
+    }
+
+    /**
+     * 获取各种对象
+     */
+    public static void object() {
+        //放元素
+        Map<String, Integer> personAges = new HashMap<String, Integer>();
+        personAges.put("语文平均分", 67);
+        personAges.put("数学平均分", 81);
+        personAges.put("英语平均分", 85);
+
+        //获取entrySet
+        Set<Entry<String, Integer>> entrys = personAges.entrySet();
+        System.out.println(entrys);
+        //获取keySet
+        Set<String> keys = personAges.keySet();
+        System.out.println(keys);
+        //获取values
+        Collection<Integer> values = personAges.values();
+        System.out.println(values);
     }
 
     /**
