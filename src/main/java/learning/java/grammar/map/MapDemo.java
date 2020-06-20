@@ -25,7 +25,10 @@ public class MapDemo {
         //        put();
         //        get();
         //        remove();
-        loop();
+        loop1();
+        loop2();
+        findKey();
+        findValue();
     }
 
     /**
@@ -76,9 +79,9 @@ public class MapDemo {
     }
 
     /**
-     * 循环元素
+     * 循环元素，方法1
      */
-    public static void loop() {
+    public static void loop1() {
         //放元素
         Map<String, Integer> personAges = new HashMap<String, Integer>();
         personAges.put("语文平均分", 67);
@@ -93,6 +96,60 @@ public class MapDemo {
             //获取value
             System.out.println(entry.getValue());
         }
+    }
+
+    /**
+     * 循环元素，方法2
+     */
+    public static void loop2() {
+        //放元素
+        Map<String, Integer> personAges = new HashMap<String, Integer>();
+        personAges.put("语文平均分", 67);
+        personAges.put("数学平均分", 81);
+        personAges.put("英语平均分", 85);
+
+        //获取Key列表
+        Set<String> keys = personAges.keySet();
+        for (String key : keys) {
+            //打印key
+            System.out.println(key);
+            //获取value
+            System.out.println(personAges.get(key));
+        }
+    }
+
+    /**
+     * 是否包含Key
+     */
+    public static void findKey() {
+        //放元素
+        Map<String, Integer> personAges = new HashMap<String, Integer>();
+        personAges.put("tom", 67);
+        personAges.put("lisa", 81);
+        personAges.put("kenny", 85);
+
+        //是否包含Key
+        if (personAges.containsKey("tom")) {
+            System.out.println("找到tom");
+        }
+
+    }
+
+    /**
+     * 是否包含Value
+     */
+    public static void findValue() {
+        //放元素
+        Map<String, Integer> personAges = new HashMap<String, Integer>();
+        personAges.put("tom", 67);
+        personAges.put("lisa", 81);
+        personAges.put("kenny", 85);
+
+        //是否包含Value
+        if (personAges.containsValue(81)) {
+            System.out.println("找到81");
+        }
+
     }
 
 }
