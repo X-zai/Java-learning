@@ -1,7 +1,7 @@
 package learning.java.practice.p20200614;
 
 public class Wc_cs {
-	public String jieShu;
+	public int jieShu;
 
 	public String jvBanNianShu;
 
@@ -9,18 +9,18 @@ public class Wc_cs {
 
 	public String guanJvn;
 
-	public Wc_cs(String jieShu, String jvBanNianShu, String jvBanDiDian, String guanJvn) {
+	public Wc_cs(int jieShu, String jvBanNianShu, String jvBanDiDian, String guanJvn) {
 		this.jieShu = jieShu;
 		this.jvBanNianShu = jvBanNianShu;
 		this.jvBanDiDian = jvBanDiDian;
 		this.guanJvn = guanJvn;
 	}
 
-	public String getJieShu() {
+	public int getJieShu() {
 		return jieShu;
 	}
 
-	public void setJieShu(String jieShu) {
+	public void setJieShu(int jieShu) {
 		this.jieShu = jieShu;
 	}
 

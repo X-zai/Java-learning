@@ -4,6 +4,8 @@
  */
 package learning.java.practice.p20200614;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -12,9 +14,10 @@ import java.util.Set;
 /**
  * 
  * @author Rayliu40k
- * @version $Id: Wc3.java, v 0.1 Jul 19, 2020 9:38:27 AM Rayliu40k Exp $
+ * @version $Id: Wc4_加餐.java, v 0.1 Jul 19, 2020 11:05:59 AM Rayliu40k Exp $
  */
-public class Wc3 {
+public class Wc4_加餐 {
+
     public static void main(String[] args) throws Exception {
         Map<String, Wc_cs> wc = new HashMap<String, Wc_cs>();
         Wc_cs w1 = new Wc_cs(1, "1930", "乌拉圭", "乌拉圭");
@@ -59,9 +62,21 @@ public class Wc3 {
         wc.put(w19.jvBanNianShu, w19);
         wc.put(w20.jvBanNianShu, w20);
         wc.put(w21.jvBanNianShu, w21);
+        System.out.println("欢迎来到世界杯查询软件");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("请输入起始届数:");
+        String inputstart = br.readLine();
+        System.out.print("请输入结束届数:");
+        String inputend = br.readLine();
+        int start = Integer.valueOf(inputstart);
+        int end = Integer.valueOf(inputend);
+        if (start > end) {
+            System.out.println("[WARNING]结束届数不能小于起始届数!");
+            main(args);
+        }
         Set<Entry<String, Wc_cs>> entrys = wc.entrySet();
         for (Entry<String, Wc_cs> entry : entrys) {
-            if (entry.getValue().getJvBanDiDian().equals(entry.getValue().getGuanJvn())) {
+            if (entry.getValue().getJieShu() >= start && entry.getValue().getJieShu() <= end) {
                 System.out
                     .println(entry.getValue().getJieShu() + "," + entry.getValue().getJvBanNianShu()
                              + "," + entry.getValue().getJvBanDiDian() + ","
