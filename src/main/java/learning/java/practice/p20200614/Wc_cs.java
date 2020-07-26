@@ -3,13 +3,13 @@ package learning.java.practice.p20200614;
 public class Wc_cs {
 	public int jieShu;
 
-	public String jvBanNianShu;
+	public int jvBanNianShu;
 
 	public String jvBanDiDian;
 
 	public String guanJvn;
 
-	public Wc_cs(int jieShu, String jvBanNianShu, String jvBanDiDian, String guanJvn) {
+	public Wc_cs(int jieShu, int jvBanNianShu, String jvBanDiDian, String guanJvn) {
 		this.jieShu = jieShu;
 		this.jvBanNianShu = jvBanNianShu;
 		this.jvBanDiDian = jvBanDiDian;
@@ -24,11 +24,11 @@ public class Wc_cs {
 		this.jieShu = jieShu;
 	}
 
-	public String getJvBanNianShu() {
+	public int getJvBanNianShu() {
 		return jvBanNianShu;
 	}
 
-	public void setJvBanNianShu(String jvBanNianShu) {
+	public void setJvBanNianShu(int jvBanNianShu) {
 		this.jvBanNianShu = jvBanNianShu;
 	}
 
