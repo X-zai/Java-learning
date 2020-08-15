@@ -3,11 +3,12 @@ package learning.java.example;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
- 
+
 public class 北京时间 {
 
     public static void main(String[] args) throws Exception {
-        System.out.println(getNextDay(0));
+        //System.out.println(getNextDay(0));
+        System.out.println(getTime(10));
     }
 
     /**
@@ -71,6 +72,22 @@ public class 北京时间 {
             week = "周六";
         }
         return week;
+    }
+
+    /**
+     * 获取多少分钟后的时间
+     */
+    public static Date getTime(int mins) {
+        //当前的时间
+        Date date = new Date();
+        System.out.println(date);
+        //得到一个Calendar
+        Calendar calendar = Calendar.getInstance();
+        //设置当前时间
+        calendar.setTime(date);
+        //在当前时间上添加多少分钟
+        calendar.add(Calendar.MINUTE, mins);
+        return calendar.getTime();
     }
 
 }
