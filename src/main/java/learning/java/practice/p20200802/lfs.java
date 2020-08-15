@@ -22,7 +22,7 @@ public class lfs {
 			if (lfs__.nl >= 18 && lfs__.xb.equals("男")) {
 				sj = sj + 30;
 				q = q + 20;
-			} else if (lfs__.nl >= 18 && lfs__.xb.equals("女")) {
+ 			} else if (lfs__.nl >= 18 && lfs__.xb.equals("女")) {
 				sj = sj + 65;
 				q = q + 45;
 			} else if (lfs__.nl < 18) {
