@@ -12,7 +12,7 @@ public class 北京时间 {
     }
 
     /**
-     * 获得当前日期
+     * 获得当前日期并格式化
      */
     private static void getDate() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd号 HH时mm分ss秒");
