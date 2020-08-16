@@ -7,15 +7,15 @@ import java.util.Date;
 public class 北京时间 {
 
     public static void main(String[] args) throws Exception {
-        //System.out.println(getNextDay(0));
-        System.out.println(getTime(10));
+        getDate();
+        //System.out.println(getTime(10));
     }
 
     /**
      * 获得当前日期并格式化
      */
     private static void getDate() {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd号 HH时mm分ss秒");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.println("当前时间为：" + sdf.format(new Date()));
     }
 
