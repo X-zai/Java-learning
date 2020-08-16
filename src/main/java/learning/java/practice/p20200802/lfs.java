@@ -34,19 +34,17 @@ public class lfs {
 				q = q + 20;
 			}
 		}
-		System.out.println("理发师已经工作了" + sj + "分钟 , 挣了" + q + "元 , ta在"+getTime(sj)+"下班 .");
+		System.out.println("理发师已经工作了" + sj + "分钟 , 挣了" + q + "元 , 他在" + getTime(sj) + "下班 .");
 	}
-	public static Date getTime(int mins) throws Exception {
-		DateFormat d = new SimpleDateFormat("yyyy年MM月dd日 hh:mm:ss");   //定义日期格式
-		Date date = d.parse("2020年08月10日 09:00:00");
-        //当前的时间
-        System.out.println(date);
-        //得到一个Calendar
-        Calendar calendar = Calendar.getInstance();
-        //设置当前时间
-        calendar.setTime(date);
-        //在当前时间上添加多少分钟
-        calendar.add(Calendar.MINUTE, mins);
-        return calendar.getTime();
-    }
+
+	public static String getTime(int mins) throws Exception {
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		Date date = sdf.parse("09:00:00");
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+		calendar.add(Calendar.MINUTE, mins);
+		Date d = calendar.getTime();
+		String textDate = sdf.format(d);
+		return textDate;
+	}
 }
