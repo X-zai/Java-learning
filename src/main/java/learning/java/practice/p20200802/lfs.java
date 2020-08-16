@@ -33,6 +33,7 @@ public class lfs {
 				q = q + 20;
 			}
 		}
+		
 		System.out.println("理发师已经工作了" + sj + "分钟 , 挣了" + q + "元 , 他在" + getTime(sj) + "下班 .");
 	}
 
