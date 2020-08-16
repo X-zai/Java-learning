@@ -34,7 +34,7 @@ public class 文件 {
      */
     public static void create() {
         //文件夹路径
-        String filePath = "/Users/Rayliu40k/eclipse-workspace/java-learning/src/main/java/learning/java/grammar";
+        String filePath = "/Users/Rayliu40k/eclipse-workspace/Java-learning_github/src/main/java/learning/java/grammar";
         //文件名
         String fileName = "myfile.txt";
         //文件完整路径(File.separator根据操作系统自动选择文件分隔符)
