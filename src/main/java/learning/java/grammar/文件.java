@@ -120,7 +120,7 @@ public class 文件 {
             //关闭资源
             fr.close();
         } catch (Exception e) {
-            // TODO: handle exception
+            e.printStackTrace();
         }
     }
 
@@ -146,7 +146,7 @@ public class 文件 {
             //关闭资源
             br.close();
         } catch (Exception e) {
-            
+            e.printStackTrace();
         }
     }
 
