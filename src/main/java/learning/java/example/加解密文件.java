@@ -34,7 +34,7 @@ public class 加解密文件 {
         System.out.println("AES加密后：" + new String(cipherBytes));
         //解密数据, 返回明文
         byte[] plainBytes = decrypt(cipherBytes, key.getBytes());
-        // 输出解密后的明文: "Hello world!"
+        //输出解密后的明文: "Hello world!"
         System.out.println("AES解密后：" + new String(plainBytes));
     }
 
