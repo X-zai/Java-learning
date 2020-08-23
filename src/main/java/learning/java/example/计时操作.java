@@ -9,7 +9,7 @@ package learning.java.example;
  * @author Rayliu40k
  * @version $Id: 记时操作.java, v 0.1 Oct 8, 2019 4:16:34 PM Rayliu40k Exp $
  */
-public class 记时操作 {
+public class 计时操作 {
 
     /**
      * 
