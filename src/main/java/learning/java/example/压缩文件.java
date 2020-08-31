@@ -44,9 +44,9 @@ public class 压缩文件 {
         //开始压缩文件
         ZipOutputStream zipOut = new ZipOutputStream(new FileOutputStream(zipFile));
         zipOut.putNextEntry(new ZipEntry(file.getName()));
-        int temp = 0;
-        while ((temp = input.read()) != -1) {
-            zipOut.write(temp);
+        int b = 0;
+        while ((b = input.read()) != -1) {
+            zipOut.write(b);
         }
         //关闭文件流
         input.close();
