@@ -25,8 +25,7 @@ public class 解压文件 {
      */
     public static void main(String[] args) {
         //Zip源文件
-        File srcFile = new File(
-            "C:/Users/Xzai/Downloads/eclipse-java-2020-06-R-win32-x86_64.zip");
+        File srcFile = new File("C:/Users/Xzai/Downloads/eclipse-java-2020-06-R-win32-x86_64.zip");
         //解压后的目标文件夹
         String destDirPath = "C:/Users/Xzai/Desktop/xxx";
         unZip(srcFile, destDirPath);
@@ -81,9 +80,10 @@ public class 解压文件 {
                     //                        fos.write(len);
                     //                    }
                     //第二种写法(每次读1024个字节)
-                    byte[] buffer = new byte[1024* 10];
-                    while (is.read(buffer) != -1) {
-                        fos.write(buffer);
+                    int len = -1;
+                    byte[] buf = new byte[1024];
+                    while ((len = is.read(buf)) != -1) {
+                        fos.write(buf, 0, len);
                     }
                     //关流顺序，先打开的后关闭
                     fos.close();
