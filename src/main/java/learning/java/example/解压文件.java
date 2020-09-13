@@ -26,9 +26,9 @@ public class 解压文件 {
     public static void main(String[] args) {
         //Zip源文件
         File srcFile = new File(
-            "/Users/Rayliu40k/eclipse-workspace/Java-learning_github/src/main/java/learning/java/example/apache-maven-3.6.3-bin.zip");
+            "C:/Users/Xzai/Downloads/eclipse-java-2020-06-R-win32-x86_64.zip");
         //解压后的目标文件夹
-        String destDirPath = "/tmp";
+        String destDirPath = "C:/Users/Xzai/Desktop/xxx";
         unZip(srcFile, destDirPath);
     }
 
@@ -81,7 +81,7 @@ public class 解压文件 {
                     //                        fos.write(len);
                     //                    }
                     //第二种写法(每次读1024个字节)
-                    byte[] buffer = new byte[1024];
+                    byte[] buffer = new byte[1024* 10];
                     while (is.read(buffer) != -1) {
                         fos.write(buffer);
                     }
