@@ -23,7 +23,6 @@ public class 磁盘卷标 {
     public static void main(String[] args) {
         //当前文件系统类
         FileSystemView fsv = FileSystemView.getFileSystemView();
-        //列出所有windows 磁盘
         File[] fs = File.listRoots();
         //显示磁盘卷标
         for (int i = 0; i < fs.length; i++) {
