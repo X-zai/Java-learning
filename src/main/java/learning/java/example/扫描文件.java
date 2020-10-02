@@ -21,8 +21,8 @@ public class 扫描文件 {
     public static void main(String[] args) {
         //参数
         int[] stat = new int[] { 0, 0 };
-        String path = "/usr/local";
-        String suffix = ".ini";
+        String path = "d:/";
+        String suffix = "000.exe";
         //扫描
         long start = System.currentTimeMillis();
         findFiles(path, suffix, stat);
