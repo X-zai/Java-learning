@@ -40,7 +40,7 @@ public class 变量作用域 {
     }
 
     /**
-     * 方法级变、块级变量
+     * 方法级变量、块级变量
      */
     public static void demo2() {
         //方法级变量j
@@ -59,7 +59,7 @@ public class 变量作用域 {
     }
 
     /**
-     * 方法级变、块级变量
+     * 方法级变量、块级变量
      */
     public static void demo3() {
         //方法级变量j
